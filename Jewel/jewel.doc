@@ -1,0 +1,41 @@
+
+Script Documentation
+
+Purpose:
+
+Scrapes product data from the Jewel-Osco website.
+Extracts information like product title, weight, regular price, sale price, image URL, product URL, UPC, and category.
+Saves the collected data as a JSON file named "jewel_<current_date>.json".
+Uploads the JSON file to OneDrive for storage.
+Functionality:
+
+cat_links():
+
+Retrieves category links from the Jewel-Osco website.
+Stores the links and category IDs in an Excel file named "Category_links_new.xlsx".
+product_details():
+
+Fetches product details for each category ID using Jewel-Osco's API.
+Extracts product information and creates a dataset.
+Formats UPCs and extracts weight information using a regex pattern.
+Saves the dataset as a JSON file and uploads it to OneDrive.
+Scheduling:
+
+The script is designed to run twice a week:
+Monday at 6 PM Indian Standard Time (IST)
+Wednesday at 6 PM IST
+It uses the BackgroundScheduler from the apscheduler library for scheduling.
+Key Libraries:
+
+requests: for making HTTP requests to the website and API.
+bs4 (Beautiful Soup): for parsing HTML content.
+pandas: for working with Excel files and data manipulation.
+json: for handling JSON data.
+datetime: for working with dates and times.
+undetected_chromedriver: for potential web browser automation (not currently used in the active code).
+onedrive: for uploading files to OneDrive (requires additional setup).
+apscheduler: for scheduling tasks.
+Additional Notes:
+
+The script includes commented-out code related to web browser automation and scheduling logs, which can be adjusted as needed.
+The upload_file function using OneDrive requires appropriate setup and credentials.
