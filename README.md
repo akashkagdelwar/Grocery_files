@@ -1,8 +1,4 @@
-Walmart Process Document 
 
- 
-
-Requirements: -  
 
 Fetch all Grocery Products from Walmart website using client given pin code location. 
 
